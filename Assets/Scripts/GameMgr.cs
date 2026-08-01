@@ -6,6 +6,7 @@ public class GameMgr : MonoBehaviour
 {
     public static GameMgr I;
     public PlayerMovement playermovementScript;
+    public ArmourEdit armoureditScript;
     // Start is called before the first frame update
     void Start()
     {
