@@ -12,15 +12,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update()
+    public void Update()
     {
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameMgr.I.isCanMove)
         {
-            if (grounded)
+            body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Jump();
+                if (grounded)
+                {
+                    Jump();
+                }
             }
         }
     }

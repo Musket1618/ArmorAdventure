@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ArmourEdit : MonoBehaviour
 {
+    public GameObject ArmourEditView;
     private bool isReadytoEdit = false;
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -10,6 +11,11 @@ public class ArmourEdit : MonoBehaviour
         {            
             isReadytoEdit = true;
         }
+    }
+
+    private void Start()
+    {
+        ArmourEditView.SetActive(false);
     }
 
     private void Update()
@@ -21,10 +27,17 @@ public class ArmourEdit : MonoBehaviour
                 ArmourEditing();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameMgr.I.isCanMove = true;
+            ArmourEditView.SetActive(false);            
+        }
     }
 
     private void ArmourEditing()
     {
-        print("1");
+        GameMgr.I.isCanMove = false;
+        ArmourEditView.SetActive(true);
     }
 }
