@@ -27,19 +27,7 @@ public class EquipmentMgr : MonoBehaviour
     {
         EquipmentSlotType targetSlot = newItem.equipSlotType;
 
-        // 1. 해당 슬롯이 잠겨(비활성화) 있다면 장착 불가
-        if (IsSlotLocked(targetSlot))
-        {
-            Debug.Log($"{targetSlot} 슬롯이 비활성화되어 있어 장착할 수 없습니다.");
-            return;
-        }
-
-        // 2. 이미 해당 부위에 아이템이 있다면 장착 불가
-        if (currentEquipment.ContainsKey(targetSlot) && currentEquipment[targetSlot] != null)
-        {
-            Debug.Log($"{targetSlot} 부위에 이미 아이템이 장착되어 있습니다.");
-            return;
-        }
+        
 
         // 3. 장착 처리
         currentEquipment[targetSlot] = newItem;
@@ -74,7 +62,7 @@ public class EquipmentMgr : MonoBehaviour
         }
 
         // 반복문을 무사히 통과했다면 활성화된 모든 슬롯이 찼다는 뜻!
-        Debug.Log("Stage");
+        GameMgr.I.Nextscene();
     }
 
     // 해당 부위 슬롯의 잠금 상태 확인 함수

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMgr : MonoBehaviour
 {
@@ -8,19 +9,30 @@ public class GameMgr : MonoBehaviour
     public PlayerMovement playermovementScript;
     public ArmourEdit armoureditScript;
     public bool isCanMove = true;
+    
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
     private void Awake()
     {
-        I = this;
+        if (I == null)
+        {
+            I = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Nextscene()
     {
-        
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
+    }
+    
 }
