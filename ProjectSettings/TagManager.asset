@@ -39,6 +39,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 160368081
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Armourstand
+    uniqueID: 2408273723
+    locked: 0
+  - name: Item
+    uniqueID: 2232389855
+    locked: 0
+  - name: Player
+    uniqueID: 3871687495
+    locked: 0
+  - name: Platform
+    uniqueID: 2767532165
+    locked: 0
+  - name: Pillar
+    uniqueID: 593085075
     locked: 0

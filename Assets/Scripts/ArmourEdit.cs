@@ -10,6 +10,14 @@ public class ArmourEdit : MonoBehaviour
         if (other.CompareTag("Player"))
         {            
             isReadytoEdit = true;
+        }       
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isReadytoEdit = false;
         }
     }
 
@@ -20,6 +28,7 @@ public class ArmourEdit : MonoBehaviour
 
     private void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.E))
         {
             if (isReadytoEdit)
