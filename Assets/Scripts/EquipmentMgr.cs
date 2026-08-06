@@ -26,7 +26,10 @@ public class EquipmentMgr : MonoBehaviour
     public void Equip(Item newItem)
     {
         EquipmentSlotType targetSlot = newItem.equipSlotType;
-
+        if (targetSlot == EquipmentSlotType.Gambeson)
+        {
+            print("dwa");
+        }
         
 
         // 3. ÀåÂø Ã³¸®
