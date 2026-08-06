@@ -1,23 +1,28 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private Rigidbody2D body;
-    private bool grounded;
+    [SerializeField] private float moveSpeed = 5f;
+    float horizontalInput;
+    [SerializeField] private float jumpingPower = 4f;
 
-    private void Awake()
+    private Rigidbody2D rb;
+
+    private bool grounded;
+    
+
+    void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
     public void Update()
     {
         if (GameMgr.I.isCanMove)
-        {
-            body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-
+        {           
+            rb.velocity = new Vector2 (horizontalInput * moveSpeed, rb.velocity.y);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (grounded)
@@ -28,9 +33,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        if (horizontalInput > 0)
+        {
+            gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        }
+
+        if (horizontalInput < 0)
+        {
+            gameObject.transform.localRotation = new Quaternion(0, -180, 0, 0);
+        }
+    }
+
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         grounded = false;
     }
 
@@ -41,4 +61,7 @@ public class PlayerMovement : MonoBehaviour
             grounded = true;
         }
     }
+
+    
+    
 }
