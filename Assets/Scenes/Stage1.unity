@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 92152377}
   - component: {fileID: 92152379}
   - component: {fileID: 92152378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Edge
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 378788037}
   - component: {fileID: 378788039}
   - component: {fileID: 378788038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Edge (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 758783613}
   - component: {fileID: 758783615}
   - component: {fileID: 758783614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Edge
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 1526253357}
   - component: {fileID: 1526253356}
   - component: {fileID: 1526253355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Edge
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2073,10 +2073,6 @@ PrefabInstance:
       value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 7064877680307985952, guid: 74b5ab7de27fd3a49b9066cae6197514, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7064877680307985952, guid: 74b5ab7de27fd3a49b9066cae6197514, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2275,6 +2271,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2209464729076986585, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3855944619642616284, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2314,14 +2314,6 @@ PrefabInstance:
     - target: {fileID: 3855944619642616284, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4835057491863383053, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4835057491863383053, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
-      propertyPath: m_Size.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6040825807598282568, guid: e2d8e53691d057b4581c7533280d188c, type: 3}
       propertyPath: m_Name

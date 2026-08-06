@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     float horizontalInput;
     [SerializeField] private float jumpingPower = 4f;
+    [Header("지면 감지 설정")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+    [SerializeField] private LayerMask groundLayer;
 
     private Rigidbody2D rb;
 
@@ -46,22 +50,22 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.transform.localRotation = new Quaternion(0, -180, 0, 0);
         }
+
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
+
 
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        grounded = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnDrawGizmosSelected()
     {
-        if(collision.gameObject.tag == "Ground")
+        if (groundCheck != null)
         {
-            grounded = true;
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
-
-    
-    
 }
