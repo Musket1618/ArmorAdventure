@@ -1,5 +1,7 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,11 +11,14 @@ public class GameMgr : MonoBehaviour
     public PlayerMovement playermovementScript;
     public ArmourEdit armoureditScript;
     public bool isCanMove = true;
-    
+    public float CountTime;
+    public TextMeshProUGUI Timer;
+
     // Start is called before the first frame update
-   
+
     private void Awake()
     {
+        DOTween.SetTweensCapacity(10000, 1000);
         if (I == null)
         {
             I = this;
@@ -34,5 +39,11 @@ public class GameMgr : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(sceneName);
     }
-    
+
+    private void Update()
+    {
+        CountTime -= Time.deltaTime;
+        Timer.text = CountTime.ToString("F1");
+    }
+
 }

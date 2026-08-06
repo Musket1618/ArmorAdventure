@@ -34,7 +34,7 @@ public class InventorySlot : MonoBehaviour
 
             // 소모품인 경우 사용 후 인벤토리에서 제거
             
-                Inventory.instance.Remove(item);
+                
             
         }
     }

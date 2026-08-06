@@ -49,6 +49,8 @@ MonoBehaviour:
   playermovementScript: {fileID: 0}
   armoureditScript: {fileID: 0}
   isCanMove: 1
+  CountTime: 30
+  Timer: {fileID: 0}
 --- !u!1 &1747151362043867195
 GameObject:
   m_ObjectHideFlags: 0

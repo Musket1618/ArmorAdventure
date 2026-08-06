@@ -9,10 +9,9 @@ public class ItemPickUp : MonoBehaviour
         // 충돌한 대상이 플레이어일 때만 작동
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+            
                 PickUp();
-            }
+            
         }
     }
 
