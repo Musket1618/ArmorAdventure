@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2057264259790580045}
   - component: {fileID: 529968985946481831}
   m_Layer: 5
-  m_Name: LHandSlot
+  m_Name: RHandSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 13
+  slotType: 12
   icon: {fileID: 1392253681785896924}
   isLocked: 0
 --- !u!1 &825749311511290869
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4805933665229926084}
   - component: {fileID: 6653353748174660628}
   m_Layer: 5
-  m_Name: ShoulderSlot
+  m_Name: SurcoatSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 14
+  slotType: 11
   icon: {fileID: 6193466607835381588}
   isLocked: 0
 --- !u!1 &1204135676726494048
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 7398531484918214901}
   - component: {fileID: 482145583881497884}
   m_Layer: 5
-  m_Name: CoifSlot
+  m_Name: GambesonSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 4
+  slotType: 0
   icon: {fileID: 3752929682579419240}
   isLocked: 0
 --- !u!1 &1622882294512008469
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 8370162675309328834}
   - component: {fileID: 5780329809009434516}
   m_Layer: 5
-  m_Name: HelmetSlot
+  m_Name: CoifSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 3
+  slotType: 4
   icon: {fileID: 7699662942769205535}
   isLocked: 0
 --- !u!1 &3919236902344149131
@@ -2175,7 +2175,7 @@ GameObject:
   - component: {fileID: 4656722441550956503}
   - component: {fileID: 2284778644528380285}
   m_Layer: 5
-  m_Name: ChainmailSlot
+  m_Name: ChaincoifSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 1
+  slotType: 5
   icon: {fileID: 7824501207305718349}
   isLocked: 0
 --- !u!1 &6582549346420433317
@@ -2514,7 +2514,7 @@ GameObject:
   - component: {fileID: 975900364266447309}
   - component: {fileID: 1998400303583973043}
   m_Layer: 5
-  m_Name: SurcoatSlot
+  m_Name: ChainmailSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 11
+  slotType: 1
   icon: {fileID: 4090138593992578291}
   isLocked: 0
 --- !u!1 &7005586653124214976
@@ -2681,7 +2681,7 @@ GameObject:
   - component: {fileID: 4560817356018357577}
   - component: {fileID: 1022205434252666790}
   m_Layer: 5
-  m_Name: ChaincoifSlot
+  m_Name: ShoulderSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2757,7 +2757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 5
+  slotType: 14
   icon: {fileID: 2719573759949075323}
   isLocked: 0
 --- !u!1 &7444813756369412556
@@ -2848,7 +2848,7 @@ GameObject:
   - component: {fileID: 1620703609314793950}
   - component: {fileID: 3777402280122918778}
   m_Layer: 5
-  m_Name: GambesonSlot
+  m_Name: HelmetSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2924,7 +2924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 0
+  slotType: 3
   icon: {fileID: 8033957851319360859}
   isLocked: 0
 --- !u!1 &7663224345144918767
@@ -2940,7 +2940,7 @@ GameObject:
   - component: {fileID: 8622788419540880324}
   - component: {fileID: 8985589566604244921}
   m_Layer: 5
-  m_Name: RHandSlot
+  m_Name: PantsSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 12
+  slotType: 8
   icon: {fileID: 6250417517535402478}
   isLocked: 0
 --- !u!1 &8561096625252112598
@@ -3210,7 +3210,7 @@ GameObject:
   - component: {fileID: 8585555289328836628}
   - component: {fileID: 7514174173790273962}
   m_Layer: 5
-  m_Name: PantsSlot
+  m_Name: LHandSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3286,7 +3286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e76f70b0e5efe4b96ba4af4052af1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 8
+  slotType: 13
   icon: {fileID: 3045179722645372762}
   isLocked: 0
 --- !u!1001 &455354524803973635

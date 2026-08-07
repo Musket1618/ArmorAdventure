@@ -49,7 +49,7 @@ MonoBehaviour:
   playermovementScript: {fileID: 0}
   armoureditScript: {fileID: 0}
   isCanMove: 1
-  CountTime: 30
+  CountTime: 20
   Timer: {fileID: 0}
 --- !u!1 &1747151362043867195
 GameObject:
@@ -126,3 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2847c37efe895414a87920624d24ba9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGambesonWorn: 0
+  isCoifWorn: 0
+  isPantsWorn: 0
