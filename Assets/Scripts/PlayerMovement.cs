@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         if (GameMgr.I.isCanMove)
         {           
             rb.velocity = new Vector2 (horizontalInput * moveSpeed, rb.velocity.y);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 if (grounded)
                 {
