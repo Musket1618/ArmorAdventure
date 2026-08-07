@@ -11,6 +11,9 @@ public class EquipmentMgr : MonoBehaviour
     // UI 갱신용 이벤트
     public delegate void OnEquipmentChanged(EquipmentSlotType slotType, Item newItem);
     public OnEquipmentChanged onEquipmentChanged;
+    public bool isGambesonWorn = false;
+    public bool isCoifWorn = false;
+    public bool isPantsWorn = false;
 
     private void Awake()
     {
@@ -26,11 +29,31 @@ public class EquipmentMgr : MonoBehaviour
     public void Equip(Item newItem)
     {
         EquipmentSlotType targetSlot = newItem.equipSlotType;
-        if (targetSlot == EquipmentSlotType.Gambeson)
+        if (targetSlot == EquipmentSlotType.Gambeson) isGambesonWorn = true;
+        if (targetSlot == EquipmentSlotType.Coif) isCoifWorn = true;
+        if (targetSlot == EquipmentSlotType.Pants) isPantsWorn = true;
+        if (targetSlot == EquipmentSlotType.Helmet || targetSlot == EquipmentSlotType.Chaincoif)
         {
-            print("dwa");
+            if (!isCoifWorn)
+            {
+                return;
+            }
         }
-        
+        if (targetSlot == EquipmentSlotType.Chainmail || targetSlot == EquipmentSlotType.Cuirass || targetSlot == EquipmentSlotType.Armarmor || targetSlot == EquipmentSlotType.Shoulder)
+        {
+            if (!isGambesonWorn)
+            {
+                return;
+            }
+        }
+        if (targetSlot == EquipmentSlotType.Legarmor)
+        {
+            if (!isPantsWorn)
+            {
+                return;
+            }
+        }
+
 
         // 3. 장착 처리
         currentEquipment[targetSlot] = newItem;
