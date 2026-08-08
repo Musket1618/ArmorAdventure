@@ -13,21 +13,23 @@ public class GameMgr : MonoBehaviour
     public bool isCanMove = true;
     public float CountTime;
     public TextMeshProUGUI Timer;
+    public GameSequenceMgr StartSequence;
 
     // Start is called before the first frame update
 
     private void Awake()
     {
-        DOTween.SetTweensCapacity(10000, 1000);
-        if (I == null)
-        {
-            I = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        I = this;
+        //DOTween.SetTweensCapacity(10000, 1000);
+        //if (I == null)
+        //{
+        //    I = this;
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     public void Nextscene()
@@ -40,10 +42,30 @@ public class GameMgr : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneName);
     }
 
+    private void Start()
+    {
+        StartSequence.SceneStart();
+    }
+
     private void Update()
     {
-        CountTime -= Time.deltaTime;
-        Timer.text = CountTime.ToString("F1");
+        if (CountTime > 0)
+        {
+            CountTime -= Time.deltaTime;
+
+            if (CountTime <= 0)
+            {
+                CountTime = 0f;
+                StartSequence.GameOver();
+            }           
+            Timer.text = Mathf.Max(0f, CountTime).ToString("F1");
+        }
+    }
+
+    public void SceneReload(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
     }
 
 }
