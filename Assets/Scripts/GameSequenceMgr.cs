@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSequenceMgr : MonoBehaviour
 {
@@ -42,7 +43,8 @@ public class GameSequenceMgr : MonoBehaviour
             .Append(Visor.transform.DOMoveY(540f, 0.8f).SetEase(Ease.InOutCubic));
 
         yield return Loading.WaitForCompletion();
-        GameMgr.I. SceneReload("Stage1");
+        string currentScene = SceneManager.GetActiveScene().name;
+        GameMgr.I. SceneReload(currentScene);
 
     }
 
