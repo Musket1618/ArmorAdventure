@@ -48,11 +48,14 @@ TagManager:
   - name: Armourstand
     uniqueID: 2408273723
     locked: 0
-  - name: Item
-    uniqueID: 2232389855
-    locked: 0
   - name: Player
     uniqueID: 3871687495
+    locked: 0
+  - name: Spotlight
+    uniqueID: 2420265689
+    locked: 0
+  - name: Item
+    uniqueID: 2232389855
     locked: 0
   - name: Platform
     uniqueID: 2767532165

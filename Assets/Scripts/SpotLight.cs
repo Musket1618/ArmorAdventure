@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpotLight : MonoBehaviour
 {
+    public PlayerMovement playerMovementScript;
     private bool hasTriggered = false;
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -11,9 +12,16 @@ public class SpotLight : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            GameMgr.I.isCanMove = false;
-            GameMgr.I. StartSequence.GameOver();
-            hasTriggered = true;
+            if (!playerMovementScript.isDashing)
+            {
+                GameMgr.I.isCanMove = false;
+                GameMgr.I.StartSequence.GameOver();
+                hasTriggered = true;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 

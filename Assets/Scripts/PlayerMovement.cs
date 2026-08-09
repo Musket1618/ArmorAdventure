@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -18,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool grounded;
+    private bool canDash = true;
+    public bool isDashing = false;
+    private bool faceRight = true;
+    public float DashPower;
+    public float DashTime;
+    public float DashCooldown;
 
     void Start()
     {
@@ -26,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
+        if (isDashing) return;
         // 이동 가능할 때만 점프 입력 받기
         if (GameMgr.I.isCanMove)
         {
@@ -34,10 +42,15 @@ public class PlayerMovement : MonoBehaviour
                 Jump();
             }
         }
+        if(Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
     }
 
     private void FixedUpdate()
     {
+        if (isDashing) return;
         // 1. 지면 감지
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -63,11 +76,45 @@ public class PlayerMovement : MonoBehaviour
             float targetVelocityX = Mathf.Lerp(rb.velocity.x, 0f, Time.fixedDeltaTime * deceleration);
             rb.velocity = new Vector2(targetVelocityX, rb.velocity.y);
         }
+
+        if(horizontalInput > 0 && !faceRight)
+        {
+            Flip();
+        }
+
+        if (horizontalInput < 0 && faceRight)
+        {
+            Flip();
+        }
     }
 
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+    }
+
+    private IEnumerator Dash()
+    {
+        print("dash");
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * DashPower, 0f);
+        yield return new WaitForSeconds(DashTime);
+        rb.gravityScale = originalGravity;
+        yield return new WaitForSeconds(0.1f);
+        isDashing = false;
+        yield return new WaitForSeconds(DashCooldown);
+        canDash = true;
+    }
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        faceRight = !faceRight;
     }
 
     private void OnDrawGizmosSelected()
