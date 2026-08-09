@@ -47,27 +47,16 @@ public class EquipmentMgr : MonoBehaviour
         // 2. 선행 조건 체크
         if (targetSlot == EquipmentSlotType.Helmet || targetSlot == EquipmentSlotType.Chaincoif)
         {
-            if (!isCoifWorn)
-            {
-                Debug.LogWarning("Coif를 먼저 착용해야 합니다.");
-                return;
-            }
+            if (!isCoifWorn) return;
+            
         }
         if (targetSlot == EquipmentSlotType.Chainmail || targetSlot == EquipmentSlotType.Cuirass || targetSlot == EquipmentSlotType.Armarmor || targetSlot == EquipmentSlotType.Shoulder)
         {
-            if (!isGambesonWorn)
-            {
-                Debug.LogWarning("Gambeson을 먼저 착용해야 합니다.");
-                return;
-            }
+            if (!isGambesonWorn) return;
         }
         if (targetSlot == EquipmentSlotType.Legarmor)
         {
-            if (!isPantsWorn)
-            {
-                Debug.LogWarning("Pants를 먼저 착용해야 합니다.");
-                return;
-            }
+            if (!isPantsWorn) return;
         }
 
         // 3. 장착 처리
