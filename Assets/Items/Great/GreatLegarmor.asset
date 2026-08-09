@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f7bc8e9f95596642a380502d010b377, type: 3}
-  m_Name: Gambeson
+  m_Name: GreatLegarmor
   m_EditorClassIdentifier: 
-  itemName: Gamebeson
-  icon: {fileID: 21300000, guid: cf8a83e07d4ef714f85601d5d3c385e6, type: 3}
-  type: 0
+  itemName: GreatLegarmor
+  icon: {fileID: 21300000, guid: a84293d007d20454188231f32b318422, type: 3}
+  equipSlotType: 9

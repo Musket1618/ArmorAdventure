@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f7bc8e9f95596642a380502d010b377, type: 3}
-  m_Name: Helmet
+  m_Name: GreatSword
   m_EditorClassIdentifier: 
-  itemName: Helmet
-  icon: {fileID: 21300000, guid: 71af805cf60b03b48bbaddbea30bed10, type: 3}
-  type: 3
-  equipSlotType: 3
+  itemName: GreatSword
+  icon: {fileID: 21300000, guid: ff8ae4b291e38c84b849ffb5d297e64d, type: 3}
+  equipSlotType: 12
