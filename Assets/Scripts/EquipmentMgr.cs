@@ -134,7 +134,7 @@ public class EquipmentMgr : MonoBehaviour
         }
 
         // 반복문을 무사히 통과했다면 활성화된 모든 슬롯이 찼다는 뜻!
-        GameMgr.I.Nextscene();
+        GameMgr.I.CutSceneActived = true;
     }
 
     // 해당 부위 슬롯의 잠금 상태 확인 함수

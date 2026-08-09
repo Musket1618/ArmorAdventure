@@ -19,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool grounded;
-    private bool canDash = true;
-    public bool isDashing = false;
+    public bool canDash = true;   
     private bool faceRight = true;
     public float DashPower;
     public float DashTime;
@@ -33,16 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        if (isDashing) return;
+        if (GameMgr.I. isDashing) return;
         // 이동 가능할 때만 점프 입력 받기
         if (GameMgr.I.isCanMove)
         {
-            if (Input.GetKeyDown(KeyCode.W) && grounded)
+            if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
                 Jump();
             }
         }
-        if(Input.GetKeyDown(KeyCode.Space) && canDash)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
         }
@@ -50,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing) return;
+        if (GameMgr.I.isDashing) return;
         // 1. 지면 감지
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -97,14 +96,14 @@ public class PlayerMovement : MonoBehaviour
     {
         print("dash");
         canDash = false;
-        isDashing = true;
+        GameMgr.I.isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * DashPower, 0f);
         yield return new WaitForSeconds(DashTime);
         rb.gravityScale = originalGravity;
         yield return new WaitForSeconds(0.1f);
-        isDashing = false;
+        GameMgr.I.isDashing = false;
         yield return new WaitForSeconds(DashCooldown);
         canDash = true;
     }

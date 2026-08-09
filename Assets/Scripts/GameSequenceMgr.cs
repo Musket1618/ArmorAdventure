@@ -48,6 +48,26 @@ public class GameSequenceMgr : MonoBehaviour
 
     }
 
+    public void NextSceneLoading()
+    {
+        StartCoroutine(co_NextSceneLoading());
+    }
+
+    public IEnumerator co_NextSceneLoading()
+    {
+        Sequence NextSceneLoading = DOTween.Sequence();
+        NextSceneLoading
+            .AppendCallback(() =>
+            {
+
+            })
+            .Append(Visor.transform.DOMoveY(540f, 0.8f).SetEase(Ease.InOutCubic));
+
+        yield return NextSceneLoading.WaitForCompletion();     
+        GameMgr.I.Nextscene();
+
+    }
+
     public void SceneStart()
     {
         StartCoroutine(co_SceneStart());

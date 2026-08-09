@@ -11,6 +11,8 @@ public class GameMgr : MonoBehaviour
     public PlayerMovement playermovementScript;
     public ArmourEdit armoureditScript;
     public bool isCanMove = true;
+    public bool isDashing = false;
+    public bool CutSceneActived = false;
     public float CountTime;
     public TextMeshProUGUI Timer;
     public GameSequenceMgr StartSequence;
@@ -68,4 +70,8 @@ public class GameMgr : MonoBehaviour
 
     }
 
+    public void GotoNextScene()
+    {
+        StartSequence.NextSceneLoading();
+    }
 }
