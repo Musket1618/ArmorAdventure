@@ -2190,6 +2190,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2536367068593293967, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+      propertyPath: m_fontSize
+      value: 40.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536367068593293967, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562610215986207868, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562610215986207868, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -431
+      objectReference: {fileID: 0}
     - target: {fileID: 4788914635510352658, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2270,12 +2286,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6270305540589118427, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935255825773674846, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8685228498992701037, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
@@ -2379,6 +2400,10 @@ PrefabInstance:
       propertyPath: CutScenceImage
       value: 
       objectReference: {fileID: 165511827453501071}
+    - target: {fileID: 3302783339936130837, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
+      propertyPath: cutsceneSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 30bc4ac2e05838040a41c98c1f9753e4, type: 3}
     - target: {fileID: 5799901568124941801, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17498079

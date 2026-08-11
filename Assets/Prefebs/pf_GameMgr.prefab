@@ -103,7 +103,7 @@ MonoBehaviour:
   isCanMove: 1
   isDashing: 0
   CutSceneActived: 0
-  CountTime: 100
+  CountTime: 30
   Timer: {fileID: 0}
   StartSequence: {fileID: 2366540567930882619}
 --- !u!1 &1747151362043867195
