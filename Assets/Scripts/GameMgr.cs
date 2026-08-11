@@ -13,6 +13,7 @@ public class GameMgr : MonoBehaviour
     public bool isCanMove = true;
     public bool isDashing = false;
     public bool CutSceneActived = false;
+    public bool isCounting = true;
     public float CountTime;
     public TextMeshProUGUI Timer;
     public GameSequenceMgr StartSequence;
@@ -51,12 +52,13 @@ public class GameMgr : MonoBehaviour
 
     private void Update()
     {
-        if (CountTime > 0)
+        if (isCounting && CountTime > 0)
         {
             CountTime -= Time.deltaTime;
 
             if (CountTime <= 0)
             {
+                StopTimer();
                 CountTime = 0f;
                 StartSequence.GameOver();
             }           
@@ -73,5 +75,10 @@ public class GameMgr : MonoBehaviour
     public void GotoNextScene()
     {
         StartSequence.NextSceneLoading();
+    }
+
+    public void StopTimer()
+    {
+        isCounting = false;
     }
 }
