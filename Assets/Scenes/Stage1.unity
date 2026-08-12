@@ -2190,22 +2190,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2536367068593293967, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
-      propertyPath: m_fontSize
-      value: 40.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536367068593293967, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562610215986207868, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562610215986207868, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -431
-      objectReference: {fileID: 0}
     - target: {fileID: 4788914635510352658, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2295,8 +2279,7 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8685228498992701037, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
@@ -2309,6 +2292,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &165511827453501072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5406623023148802182, guid: 9a52a6e48e9a8ed488861da2c3eca3f2, type: 3}
+  m_PrefabInstance: {fileID: 165511827453501070}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1345378564848882820
@@ -2389,6 +2383,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1184870643}
     - target: {fileID: 3302783339936130837, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 165511827453501072}
+    - target: {fileID: 3302783339936130837, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 788816326}
@@ -2452,6 +2450,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1334104718}
+    - target: {fileID: 8607667842552487856, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
+      propertyPath: CutSceneActived
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8607667842552487856, guid: 07c4968754bfc0b4ebac1f75a97e0c6e, type: 3}
       propertyPath: armoureditScript
       value: 
