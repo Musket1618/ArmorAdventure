@@ -86,4 +86,21 @@ public class GameSequenceMgr : MonoBehaviour
         yield return SceneStart.WaitForCompletion();
 
     }
+
+    public void ShowFace()
+    {
+        StartCoroutine(co_ShowFace());
+    }
+
+    public IEnumerator co_ShowFace()
+    {
+        Sequence ShowFace = DOTween.Sequence();
+        ShowFace
+            .AppendCallback(() =>
+            {
+                Debug.Log("ShowFace");
+            });            
+
+        yield return ShowFace.WaitForCompletion();
+    }
 }

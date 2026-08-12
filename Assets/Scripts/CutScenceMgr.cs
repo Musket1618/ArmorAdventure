@@ -140,7 +140,7 @@ public class CutScenceMgr : MonoBehaviour
         switch (eventName)
         {
             case "ShowFace":
-                Debug.Log("ShowFace 이벤트 실행");
+                GameMgr.I.ShowFaceSequence();
                 break;
         }
     }

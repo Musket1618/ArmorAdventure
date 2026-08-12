@@ -81,4 +81,9 @@ public class GameMgr : MonoBehaviour
     {
         isCounting = false;
     }
+
+    public void ShowFaceSequence()
+    {
+        StartSequence.ShowFace();
+    }
 }
