@@ -82,7 +82,7 @@ public class CutScenceMgr : MonoBehaviour
     {
         if (lines == null || currentLine >= lines.Length)
         {
-            GameMgr.I.Nextscene();
+            GameMgr.I.GotoNextScene();
             return;
         }
 
